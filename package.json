@@ -11,7 +11,7 @@
     "url": "git+https://github.com/2023PHOENIX/File-organiser.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Abhishek Shrivastava",
   "bin": {
     "mycmd": "index.js"
   },
