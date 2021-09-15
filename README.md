@@ -19,6 +19,7 @@ we have 4 command in their
 
 
    <p> after the command get run we will get a directory in which we will move all the files from given directory and organize them in new folders according to their extensions.</p>
+      
       ![image](https://user-images.githubusercontent.com/55507908/133432453-c904d9d8-3121-489b-ab01-6929084741ab.png)
    
 <div>
