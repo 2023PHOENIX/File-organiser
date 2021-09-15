@@ -22,18 +22,19 @@ we have 4 command in their
       ![image](https://user-images.githubusercontent.com/55507908/133432453-c904d9d8-3121-489b-ab01-6929084741ab.png)
    
 <div>
-   <p> App folder </p>
+   <h5> App folder </h5>
    
    ![image](https://user-images.githubusercontent.com/55507908/133432530-91c8982d-2281-44e3-9e95-b361ca3b390e.png)
-   <p> Archive </p>
+   <h5> Archive </h5>
    
    ![image](https://user-images.githubusercontent.com/55507908/133432566-0997364c-6eee-4de1-b209-77024f39b324.png)
    
-   <p> documents </p>
+   <h5> documents </h5>
    
    ![image](https://user-images.githubusercontent.com/55507908/133432651-28385973-475a-4d22-9605-4bfe493a8b8d.png)
    
-   <p> media (this folder doesn't have any file) 
+   <h5> media </h5>
+   <p> (this folder doesn't have any file) 
    because in the directory </p>
    
 </div>
