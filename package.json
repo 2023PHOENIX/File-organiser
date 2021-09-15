@@ -1,0 +1,23 @@
+{
+  "name": "file_organiser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2023PHOENIX/File-organiser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bin": {
+    "mycmd": "index.js"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2023PHOENIX/File-organiser/issues"
+  },
+  "homepage": "https://github.com/2023PHOENIX/File-organiser#readme"
+}

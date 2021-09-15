@@ -1,89 +1,59 @@
-const path = require('path');
-const fs = require('fs');
+#!/usr/bin/nodecle
 
-
-
+const path = require("path");
+const fs = require("fs");
+const { Console } = require("console");
+const treeObj = require("./tree");
+const organizeObj = require("./Organize");
 const input = process.argv.slice(2);
 
-console.log(input);
+const chalk = require("chalk");
 
-let types = {
-    media: ["mp4", "mkv"],
-    archives: ['zip', '7z', 'rar', 'tar', 'gz', 'ar', 'iso', "xz"],
-    documents: ['docx', 'doc', 'pdf', 'xlsx', 'xls', 'odt', 'ods', 'odp', 'odg', 'odf', 'txt', 'ps', 'tex'],
-    app: ['exe', 'dmg', 'pkg', "deb"]
-}
-
+// console.log(input);
 
 let cmd = input[0];
 
-
-switch(cmd){
-    case 'tree':
-        treeFn(input[1]);
-        break;
-    case 'organize':
-        organizeFn(input[1]);
-        break;
-    case 'help':
-        HelperFn();
-        break;
-    default:
-        console.log('₱ⱠɆ₳₴Ɇ ł₦₱Ʉ₮ ₵ØⱤⱤɆ₵₮ ₵Ø₥₥₳₦Đ... 😃');
+switch (cmd) {
+  case "pwd":
+    console.log(chalk.redBright(process.cwd()));
+    break;
+  case "tree":
+    treeObj.tree(input[1]);
+    break;
+  case "organize":
+    organizeObj.organize(input[1]);
+    break;
+  case "help":
+    HelperFn();
+    break;
+  default:
+    console.log("₱ⱠɆ₳₴Ɇ ł₦₱Ʉ₮ ₵ØⱤⱤɆ₵₮ ₵Ø₥₥₳₦Đ... 😃");
 }
 // TODO: organise files into directory according to filetype.
 
-function organizeFn(dirPath){
-    if(dirPath===undefined){
-        console.log('₭ł₦ĐⱠɎ Ɇ₦₮ɆⱤ V₳ⱠłĐ ₣łⱠɆ ₱₳₮Ⱨ');
-        return;
-    }
-
-
-    if(!fs.existsSync(dirPath)){
-        console.log('₱₳₮Ⱨ ĐØɆ₴ ₦Ø₮ ɆӾł₴₮');
-        return;
-    }
-
-    let destPath = path.join(dirPath,'organized_files');
-    fs.mkdirSync(destPath);
-    organizeHelper(dirPath,destPath);
-
-    
-}
-// TODO: Making Tree for given directory 
-function treeFn(path){
-    /*
-        path -> read the files inside the given path
-        create 4 folders -> send them to folder according to their file.extension.
-    */
-
-    
-}
-
+// TODO: Making Tree for given directory
 
 // TODO: Helper f/n.
 
-function HelperFn(){
-    console.log(`
+function HelperFn() {
+  console.log(
+    chalk.bold.blue(`
+
         All the commands available:
 
-    `);
-}
+    `)
+  );
+  console.log(
+    chalk.yellowBright(`
+            1. tree 'dir path' 
+                this will return you tree veiw of the folder
 
 
+            2. organize 'dir path'
+                this will help you to organize the folder according to their extension
 
 
-function organizeHelper(src,dest){
-
-    let childrens = fs.readdirSync(src);
-    for(let child of childrens){
-        // console.log(child);
-        let childPath = path.join(src,child);
-        // console.log(childPath);
-
-        if(fs.lstatSync(childPath).isFile()){
-            console.log(child);
-        }
-    }
+            3. Help Cmd
+            `)
+  );
 }
